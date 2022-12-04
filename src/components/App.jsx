@@ -84,7 +84,7 @@ export const App = () => {
       {isModalOpen ? (
         <Modal clickImage={largeImage} handleClose={closeModal} />
       ) : null}
-      <SearchBar handleSubmit={handleSubmit} />
+      <Searchbar handleSubmit={handleSubmit} />
       {isLoading & (page <= 1) ? <Loader /> : null}
       <ImageGallery>
         <ImageGalleryItem images={images} onClick={handleImageClick} />
