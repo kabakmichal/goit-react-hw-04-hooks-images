@@ -19,7 +19,7 @@ export const useFetch = (query, page, perPage) => {
       setIsLoading(true);
 
       try {
-        const result = await axios
+        await axios
           .get(
             `https://pixabay.com/api/?key=${API_KEY}&q=${query}&page=${page}&image_type=photo&orientation=horizontal&per_page=${perPage}&safesearch=true`
           )
