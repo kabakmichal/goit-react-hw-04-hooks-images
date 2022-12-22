@@ -15,9 +15,9 @@ export const App = () => {
   const {
     images,
     isLoading,
-    handleLoadingTrue,
-    handleLoadingFalse,
-    handleError,
+    // handleLoadingTrue,
+    // handleLoadingFalse,
+    // handleError,
     clearImages,
   } = useFetch(query, page, 12);
 
@@ -62,14 +62,15 @@ export const App = () => {
   };
 
   const loadMoreClick = () => {
-    handleLoadingTrue();
-    try {
-      setPage(page + 1);
-    } catch (error) {
-      handleError();
-    } finally {
-      handleLoadingFalse();
-    }
+    // handleLoadingTrue();// bez sensu?
+    // try {
+    //   setPage(page + 1);
+    // } catch (error) {
+    //   handleError();
+    // } finally {
+    //   handleLoadingFalse();
+    // }
+    setPage(page + 1);
   };
 
   return (
