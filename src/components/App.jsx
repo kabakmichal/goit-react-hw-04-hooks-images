@@ -12,14 +12,7 @@ export const App = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [largeImage, setLargeImage] = useState('');
   const [page, setPage] = useState(1);
-  const {
-    images,
-    isLoading,
-    // handleLoadingTrue,
-    // handleLoadingFalse,
-    // handleError,
-    clearImages,
-  } = useFetch(query, page, 12);
+  const { images, isLoading, clearImages } = useFetch(query, page, 12);
 
   const handleSubmit = e => {
     e.preventDefault();
@@ -62,14 +55,6 @@ export const App = () => {
   };
 
   const loadMoreClick = () => {
-    // handleLoadingTrue();// bez sensu?
-    // try {
-    //   setPage(page + 1);
-    // } catch (error) {
-    //   handleError();
-    // } finally {
-    //   handleLoadingFalse();
-    // }
     setPage(page + 1);
   };
 
